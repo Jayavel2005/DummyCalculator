@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dummy Calculator</title>
+
+    <style>
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: linear-gradient(47deg, darkblue, red);
+      }
+      .dummycalculator {
+        width: 450px;
+        height: 500px;
+        border-radius: 100px;
+        border: 10px solid black;
+        padding: 10px;
+      }
+      .addition {
+        width: 100%;
+        height: 100px;
+      }
+      h2,
+      h1 {
+        font-family: arial;
+        margin: 5px;
+        text-align: center;
+        display: block;
+        margin-bottom: 5px;
+        text-decoration: underline;
+        color: rgb(255, 247, 0);
+      }
+      p {
+        font-family: arial;
+        margin: 5px;
+        text-align: center;
+        display: block;
+        border-radius: 20px;
+        padding: 5px;
+        margin-bottom: 5px;
+        text-decoration: underline;
+        color: rgb(255, 255, 248);
+        margin-top: 15px;
+        background-color: black;
+      }
+      .input1 {
+        margin-left: 40px;
+      }
+      input {
+        border-radius: 10px;
+        border: none;
+        padding: 5px;
+      }
+      button {
+        border: none;
+        background-color: rgb(0, 255, 170);
+        padding-top: 3px;
+        padding-bottom: 3px;
+        color: white;
+        font-family: arial;
+        border-radius: 5px;
+        padding: 5px;
+        box-shadow: 2px 2px 6px rgb(255, 246, 246);
+      }
+      button:active{
+        box-shadow: none;
+      }
+      
+      
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="dummycalculator">
+        <h1>Dummy Calculator</h1>
+        <div class="addition">
+          <h2>Addition Section</h2>
+          <input id="num1" class="input1" />
+          <input id="num2" class="input2" />
+          <button onclick="add()">Click</button>
+          <p id="AdditionResult">Your Result :</p>
+        </div>
+
+        <div class="addition">
+          <h2>Subraction Section</h2>
+          <input id="num3" class="input1" />
+          <input id="num4" class="input2" />
+          <button onclick="sub()">Click</button>
+          <p id="SubractionResult">Your Result :</p>
+        </div>
+
+        <div class="addition">
+          <h2>Multiplication Section</h2>
+          <input id="num5" class="input1" />
+          <input id="num6" class="input2" />
+          <button onclick="mul()">Click</button>
+          <p id="MultiplicationResult">Your Result :</p>
+        </div>
+
+        <div class="addition">
+          <h2>Division Section</h2>
+          <input id="num7" class="input1" />
+          <input id="num8" class="input2" />
+          <button onclick="div()">Click</button>
+          <p id="DivisionResult">Your Result :</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var box1 = document.getElementById("num1");
+      var box2 = document.getElementById("num2");
+      var box3 = document.getElementById("num3");
+      var box4 = document.getElementById("num4");
+      var box5 = document.getElementById("num5");
+      var box6 = document.getElementById("num6");
+      var box7 = document.getElementById("num7");
+      var box8 = document.getElementById("num8");
+      var Result = document.getElementById("AdditionResult");
+      var Subraction = document.getElementById("SubractionResult");
+      var Multiplication = document.getElementById("MultiplicationResult");
+      var Division = document.getElementById("DivisionResult");
+
+      function add() {
+        AdditionResult.textContent =
+          "Result : " + (Number(box1.value) + Number(box2.value));
+      }
+      function sub() {
+        SubractionResult.textContent =
+          "Result : " + (Number(box3.value) - Number(box4.value));
+      }
+      function mul() {
+        MultiplicationResult.textContent =
+          "Result : " + Number(box5.value) * Number(box6.value);
+      }
+      function div() {
+        DivisionResult.textContent =
+          "Result : " + Number(box7.value) / Number(box8.value);
+      }
+    </script>
+  </body>
+</html>
